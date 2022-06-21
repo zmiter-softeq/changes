@@ -1,0 +1,17 @@
+name: 'changes'
+description: 'Find changes between branches in pull request'
+inputs:
+  folder:  
+    description: 'Which folder to search'
+    required: true
+    default: '.'
+  exclude:
+    description: 'Which folder to exclude'
+    required: false
+    default: '[]'
+outputs:
+  martrix:
+    description: 'Output matrix for changed directories'
+runs:
+  using: 'node16'
+  main: 'index.js'
