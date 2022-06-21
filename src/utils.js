@@ -14,7 +14,6 @@ const changedServices = (files, exclude, folder) => {
   const result = isDefaultFolder
     ? files
         .map(file => file.shift())
-        .filter(file => !file.includes('.'))
         .filter(uniq)
     : files
         .filter(file => file.includes(folder))
