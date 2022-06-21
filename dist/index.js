@@ -29221,7 +29221,7 @@ const { commitDiff } = __nccwpck_require__(4840);
 const { changedServices, getInputList } = __nccwpck_require__(7621);
 
 (async () => {
-  const client = new GitHub(core.getInput('token', { required: true }));
+  const client = new GitHub(getInput('token', { required: true }));
   const folderInput = getInput('folder', { required: false });
   const excludeInput = getInput('exclude', { required: false });
   const eventName = context.eventName;
