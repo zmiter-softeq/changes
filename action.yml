@@ -1,7 +1,10 @@
 name: 'changes'
 description: 'Find changes between branches in pull request'
 inputs:
-  folder:  
+  token:
+    description: 'Github token'
+    reqired: true
+  folder:
     description: 'Which folder to search'
     required: false
     default: '.'

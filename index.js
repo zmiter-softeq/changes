@@ -4,7 +4,7 @@ const { commitDiff } = require('./src/files');
 const { changedServices, getInputList } = require('./src/utils');
 
 (async () => {
-  const client = new GitHub(core.getInput('token', { required: true }));
+  const client = new GitHub(getInput('token', { required: true }));
   const folderInput = getInput('folder', { required: false });
   const excludeInput = getInput('exclude', { required: false });
   const eventName = context.eventName;
