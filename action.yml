@@ -3,15 +3,15 @@ description: 'Find changes between branches in pull request'
 inputs:
   folder:  
     description: 'Which folder to search'
-    required: true
+    required: false
     default: '.'
   exclude:
-    description: 'Which folder to exclude'
+    description: 'Which folder to exclude. Could be a comma-separated list or multiline'
     required: false
-    default: '[]'
+    default: ''
 outputs:
   martrix:
     description: 'Output matrix for changed directories'
 runs:
   using: 'node16'
-  main: 'index.js'
+  main: 'dist/index.js'
