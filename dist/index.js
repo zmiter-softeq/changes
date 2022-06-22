@@ -28999,6 +28999,7 @@ const changedServices = (files, exclude, folder) => {
   const result = isDefaultFolder
     ? files
         .map(file => file.shift())
+        .filter(file => file.startsWith('.'))
         .filter(uniq)
     : files
         .filter(file => file.includes(folder))
@@ -29015,12 +29016,12 @@ const getInputList = (items) => {
 
   if (isValue.length === 1) return isValue
 
-	const isArray = items
+  const isArray = items
     .split('\n')
     .join(',')
     .split(',')
 
-	return isArray
+  return isArray
     .filter((n) => n)
     .map((n) => n.trim())
 }
